@@ -1,6 +1,6 @@
 export default async function Page({
   params,
-  searchParams,
+  searchParams
 }: {
   params: Promise<{ slug: string }>;
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
