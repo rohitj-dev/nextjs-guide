@@ -1,6 +1,6 @@
 [
   {
-    "label": "Usage of params and search params in server components",
-    "href": "/blog/hello-world?search=nextjs-is-awesome"
+    "label": "Usage of params and search params in server component/page",
+    "href": "/blog/hello-world?search=nextjs-is-awesome&query=123"
   }
 ]
