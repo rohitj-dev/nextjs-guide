@@ -5,18 +5,21 @@ import topics from '@/db/topics.json';
 export default async function Home() {
   return (
     <div className='grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20'>
-      <main className='row-start-2 flex flex-col items-center gap-8 sm:items-start'>
+      <main className='row-start-2 flex flex-col items-center gap-8 sm:items-start w-full max-w-3xl'>
         <h1 className='text-5xl font-semibold'>TOPICS</h1>
-        <ol className='list-inside list-decimal text-center font-[family-name:var(--font-geist-mono)] text-sm sm:text-left'>
+        <div className='text-center text-sm sm:text-left font-[family-name:var(--font-geist-mono)] w-full'>
           {topics.map(({ label, href }, index) => (
-            <li key={index}>
-              {label}{' '}
-              <a href={href} target='_blank'>
-                <code className='rounded bg-black/[.05] px-1 py-0.5 font-semibold dark:bg-white/[.06]'>Click here</code>
-              </a>
-            </li>
+            <div className='whitespace-pre-line w-full grid grid-cols-12 mb-4' key={index}>
+              <span className='col-span-1 justify-self-end pr-2'>{index + 1}. </span>
+              <span className='col-span-9'>{label} </span>
+              <div className='col-span-2'>
+                <a href={href} target='_blank'>
+                  <code className='rounded bg-black/[.05] px-1 py-0.5 font-semibold dark:bg-white/[.06]'>Click Here</code>
+                </a>
+              </div>
+            </div>
           ))}
-        </ol>
+        </div>
 
         <div className='flex flex-col items-center gap-4 sm:flex-row'>
           <a
