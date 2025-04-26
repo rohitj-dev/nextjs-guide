@@ -1,5 +1,4 @@
-type Params = Promise<{ pageId: string }>;
-type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
+import type { Params, SearchParams } from '@/app/types';
 
 export default async function Page({ params, searchParams }: { params: Params; searchParams: SearchParams }) {
   const paramsRes = await params;

@@ -1,6 +1,10 @@
 [
   {
-    "label": "Usage of params and search params in server component/page",
+    "label": "Usage of params and search params in server app/blogs/[id]/page.tsx",
     "href": "/blogs/8213jn12j3h123u12j39123812?search=nextjs-is-awesome&query=123"
+  },
+  {
+    "label": "Usage of data fetching in server app/(ecommerce)/products/page.tsx",
+    "href": "/products"
   }
 ]
